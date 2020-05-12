@@ -49,13 +49,27 @@ img{
     background-color: #fff;
 }
 
+.wrap::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    background-color: var(--light-gray-blue);
+    border-bottom-left-radius: 2rem;
+}
+
 
 header{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.5fr;
     width: 70%;
     margin: auto;
     padding: 2rem 0;
+    background-color: transparent;
+    position: relative;
+    z-index: 2;
 }
 
 header .logo img{
@@ -73,20 +87,38 @@ header nav li{
 }
 
 header nav li a{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    transition: all 0.3s ease;
+    color: var(--dark-blue);
+}
+header nav li a:hover{
+    text-decoration: underline;
 }
 
 header nav li span{
     display: inline-block;
     padding-left: 4rem;
     font-size: 0.8rem;
+    color: var(--gray-blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+header nav li span:hover{
+    color: var(--primary-red);
+}
+
+
+main{
+    padding: 6rem 0;
+    position: relative;
 }
 
 .main_inner{
+    position: relative;
+    z-index: 2;
     width: 70%;
     margin: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
 }
 
 
@@ -97,7 +129,267 @@ header nav li span{
 
 .new{
     background-color: var(--dark-blue);
-    color: #fff;
+    color: #fff !important;
+    font-size: 0.7rem !important;
     padding: 0.3rem 0.5rem;
     border-radius: 1rem;
+}
+
+.content h1{
+    font-size: 2rem;
+    margin: 2rem 0 3rem 0;
+    color: var(--dark-blue);
+}
+
+.content p{
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    color: var(--dark-gray-blue);
+}
+
+.content a{
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+    background-color: var(--primary-red);
+    color: #fff;
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
+    transition: all 0.3s ease;
+}
+.content a:hover{
+    transform: scale(1.3);
+    background-color: red;
+}
+
+.image{
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -300px;
+    width: 70%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+
+
+    .wrap{
+        height: auto;
+    }
+    
+    .wrap::after{
+        width: 50%;
+        height: 50vh;
+    }
+    
+    
+    header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        margin: auto;
+        padding: 2rem 0;
+        background-color: transparent;
+        position: relative;
+        z-index: 2;
+    }
+    
+    header .logo img{
+        width: 20%;
+    }
+    
+    header nav {
+        display: none;
+    }
+
+    header #menu-btn{
+        display: block;
+    }
+
+
+
+    #menu{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 80%;
+        background-color: #fff;
+        text-align: center;
+        padding: 2rem;
+    }
+    
+    
+
+    
+    
+    main{
+        padding: 6rem 0;
+        position: relative;
+    }
+    
+    .main_inner{
+        position: relative;
+        z-index: 2;
+        width: 80%;
+        margin: auto;
+        display: flex;
+    }
+    
+    
+    .main_inner span{
+        font-size: 0.8rem;
+        color: var(--gray-blue);
+    }
+    
+    .new{
+        background-color: var(--dark-blue);
+        color: #fff !important;
+        font-size: 0.7rem !important;
+        padding: 0.3rem 0.5rem;
+        border-radius: 1rem;
+    }
+    
+    .content h1{
+        font-size: 2rem;
+        margin: 2rem 0 3rem 0;
+        color: var(--dark-blue);
+    }
+    
+    .content p{
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+        color: var(--dark-gray-blue);
+    }
+    
+    .content a{
+        display: inline-block;
+        padding: 1rem 2rem;
+        margin-right: 1rem;
+        background-color: var(--primary-red);
+        color: #fff;
+        font-size: 0.9rem;
+        border-radius: 0.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .image{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        right: -300px;
+        width: 70%;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px){
+    
+    .wrap::after{
+        width: 50%;
+        height: 50vh;
+    }
+    
+    
+    header{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        width: 80%;
+        margin: auto;
+        padding: 2rem 0;
+        background-color: transparent;
+        position: relative;
+        z-index: 2;
+    }
+    
+    header .logo img{
+        width: 20%;
+    }
+    
+    header nav {
+        display: none;
+    }
+
+    header #menu-btn{
+        display: block;
+    }
+
+
+
+    #menu{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 60%;
+        background-color: #fff;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 2px 2px ;
+    }
+    
+    
+
+    
+    
+    main{
+        padding: 4rem 0;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
+    .main_inner{
+        width: 80%;
+        display: block;
+    }
+    
+    
+    
+    .content h1{
+        font-size: 2rem;
+        margin: 2rem 0 3rem 0;
+        color: var(--dark-blue);
+    }
+    
+    .content p{
+        font-size: 1rem;
+        line-height: 1.4;
+        margin-bottom: 2rem;
+        color: var(--dark-gray-blue);
+    }
+    
+    .content a{
+        padding: 1rem 1.2rem;
+        margin-right: 0.2rem;
+        font-size: 0.8rem;
+        border-radius: 0.2rem;
+        transition: all 0.3s ease;
+    }
+
+    .image{
+        position: relative;
+        z-index: 2;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-bottom: 6rem;
+    }
+
 }
