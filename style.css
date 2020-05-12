@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+
+
+*, *::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+:root{
+    --primary-red: hsl(0, 100%, 68%);
+    --dark-blue: hsl(230, 29%, 20%);
+    --dark-gray-blue: hsl(230, 11%, 40%);
+    --gray-blue: hsl(231, 7%, 65%);
+    --light-gray-blue: hsl(207, 33%, 95%);
+}
+
+
+body{
+    font-family: 'Barlow', sans-serif;
+}
+
+
+h1, h2, h3, a{
+    font-family: 'Barlow Condensed', sans-serif;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+.wrap{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+
+header{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 70%;
+    margin: auto;
+    padding: 2rem 0;
+}
+
+header .logo img{
+    width: 20%;
+}
+
+header nav {
+    align-self: center;
+    text-align: right;
+}
+
+header nav li{
+    display: inline;
+    padding: 0 2rem;
+}
+
+header nav li a{
+    font-size: 0.8rem;
+}
+
+header nav li span{
+    display: inline-block;
+    padding-left: 4rem;
+    font-size: 0.8rem;
+}
+
+.main_inner{
+    width: 70%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.main_inner span{
+    font-size: 0.8rem;
+    color: var(--gray-blue);
+}
+
+.new{
+    background-color: var(--dark-blue);
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 1rem;
+}
