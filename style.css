@@ -173,7 +173,13 @@ main{
 
 
 
+#menu-btn{
+    display: none;
+}
 
+#menu{
+    display: none;
+}
 
 
 @media screen and (max-width: 1024px){
@@ -210,19 +216,51 @@ main{
     }
 
     header #menu-btn{
+        position: absolute;
+        right: 0;
+        top: 25%;
+        cursor: pointer;
         display: block;
+        width: 10%
+    }
+
+    header #close-btn{
+        position: absolute;
+        right: 0;
+        top: 25%;
+        cursor: pointer;
+        display: block;
+        width: 10%
     }
 
 
 
     #menu{
+        display: block;
         position: absolute;
+        z-index: 4;
         top: 20%;
         left: 10%;
         width: 80%;
         background-color: #fff;
         text-align: center;
-        padding: 2rem;
+        padding: 3rem 2rem 2rem 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 2px 4px 6px #222;
+    }
+
+    #menu li{
+        margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    #menu span{
+        display: inline-block;
+        margin-top: 2rem;
+        width: 50%;
+        padding: 0.8rem;
+        border-top: 1px solid var(--dark-gray-blue);
+        cursor: pointer;
     }
     
     
@@ -333,20 +371,42 @@ main{
 
 
 
-    #menu{
+    header #menu-btn{
         position: absolute;
-        top: 20%;
-        left: 10%;
-        width: 60%;
-        background-color: #fff;
-        text-align: center;
-        padding: 2rem;
-        border-radius: 1rem;
-        box-shadow: 2px 2px ;
+        right: 0;
+        top: 40%;
+        cursor: pointer;
+        display: block;
+        width: 10%
+    }
+
+    header #close-btn{
+        position: absolute;
+        right: 0;
+        top: 35%;
+        cursor: pointer;
+        display: block;
+        width: 10%
     }
     
     
+    #menu li{
+        margin-bottom: 2rem;
+        cursor: pointer;
+    }
 
+    #menu span{
+        display: inline-block;
+        margin-top: 2rem;
+        width: 80%;
+        padding: 0.8rem 0 0 0;
+        border-top: 1px solid var(--dark-gray-blue);
+        cursor: pointer;
+    }
+    
+    #menu{
+        top: 15%;
+    }
     
     
     main{
@@ -392,4 +452,53 @@ main{
         margin-bottom: 6rem;
     }
 
+}
+
+
+@media screen and (max-width: 340px){
+    .main_inner{
+        width: 90%;
+    }
+
+    .main_inner h1{
+        font-size: 1.5rem;
+    }
+
+    .main_inner .content a{
+        font-size: 0.7rem;
+    }
+
+    .main_inner .content span{
+        font-size: 0.7rem;
+    }
+}
+
+
+
+
+
+/* classes to toggle menu */
+
+.hide{
+    display: none !important;
+}
+
+.hide-menu{
+    opacity: 1;
+    animation: hide 0.5s 0.1s ease forwards;
+}
+@keyframes hide{
+    100%{
+        opacity: 0;
+    }
+}
+
+.show-menu{
+    opacity: 0;
+    animation: show 0.5s 0.1s ease forwards;
+}
+@keyframes show{
+    100%{
+        opacity: 1;
+    }
 }
