@@ -23,6 +23,7 @@ function init(e){
         }, 500);
     }
 
+
     function closeMenu(){
         this.classList.add('hide');
         open.classList.remove('hide');
@@ -33,6 +34,34 @@ function init(e){
             menu.classList.remove('hide-menu');
         }, 500);
     }
+
+
+
+
+
+const links = document.querySelectorAll('#menu li');
+links.forEach(link => {
+link.addEventListener('click', hide);
+})
+document.querySelector('#menu span').addEventListener('click', hide);
+
+
+function hide(e){
+
+close.classList.add('hide');
+        open.classList.remove('hide');
+
+        menu.classList.add('hide-menu');
+        setTimeout(() => {
+            menu.classList.add('hide');
+            menu.classList.remove('hide-menu');
+        }, 500);
+}
+
+
+
+
+
     
     
     

@@ -23,6 +23,7 @@
 
 body{
     font-family: 'Barlow', sans-serif;
+overflow-x: hidden !important;
 }
 
 
@@ -44,8 +45,6 @@ img{
 
 .wrap{
     position: relative;
-    height: 100vh;
-    overflow: hidden;
     background-color: #fff;
 }
 
@@ -179,16 +178,18 @@ main{
 
 #menu{
     display: none;
+
+
+
+
+
 }
 
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1150px){
 
 
 
-    .wrap{
-        height: auto;
-    }
     
     .wrap::after{
         width: 50%;
@@ -237,7 +238,7 @@ main{
 
     #menu{
         display: block;
-        position: absolute;
+        position: fixed;
         z-index: 4;
         top: 20%;
         left: 10%;
@@ -338,7 +339,7 @@ main{
 
 
 
-@media screen and (max-width: 500px){
+@media screen and (max-width: 800px){
     
     .wrap::after{
         width: 50%;
